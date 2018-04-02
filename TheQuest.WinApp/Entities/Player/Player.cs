@@ -44,13 +44,13 @@ namespace TheQuest.WinApp
         }
         internal void Move(Direction direction)
         {
-            base._location = Move(direction, _game.Boundaries);
+            _location = Move(direction, _game.Boundaries);
             if (!_game.WeaponInRoom.PickedUp)
             {
-                if (Nearby(_game.WeaponInRoom.Location, 1))
+                if (Nearby(_game.WeaponInRoom.Location, 25))
                 {
-                    _game.WeaponInRoom.PickUpWeapon();
                     _inventory.Add(_game.WeaponInRoom);
+                    _game.WeaponInRoom.PickUpWeapon();
                 }
             }
         }

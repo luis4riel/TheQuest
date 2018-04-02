@@ -45,20 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bat.cs" />
-    <Compile Include="Potion\BluePotion.cs" />
-    <Compile Include="Bow.cs" />
-    <Compile Include="Direction.cs" />
-    <Compile Include="Enemy.cs" />
+    <Compile Include="Entities\Enemies\Bat.cs" />
+    <Compile Include="Entities\Potions\BluePotion.cs" />
+    <Compile Include="Entities\Weapon\Bow.cs" />
+    <Compile Include="Enum\Direction.cs" />
+    <Compile Include="Entities\Abstract\Enemy.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="Ghost.cs" />
-    <Compile Include="Ghoul.cs" />
-    <Compile Include="IPotion.cs" />
-    <Compile Include="Mace.cs" />
-    <Compile Include="Mover.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="Potion\RedPotion.cs" />
-    <Compile Include="Sword.cs" />
+    <Compile Include="Entities\Enemies\Ghost.cs" />
+    <Compile Include="Entities\Enemies\Ghoul.cs" />
+    <Compile Include="Entities\Abstract\IPotion.cs" />
+    <Compile Include="Entities\Weapon\Mace.cs" />
+    <Compile Include="Entities\Abstract\Mover.cs" />
+    <Compile Include="Entities\Player\Player.cs" />
+    <Compile Include="Entities\Potions\RedPotion.cs" />
+    <Compile Include="Entities\Weapon\Sword.cs" />
     <Compile Include="TheQuest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,7 +67,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Weapon.cs" />
+    <Compile Include="Entities\Abstract\Weapon.cs" />
     <EmbeddedResource Include="TheQuest.resx">
       <DependentUpon>TheQuest.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,5 +93,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

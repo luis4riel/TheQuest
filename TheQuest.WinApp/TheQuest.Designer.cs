@@ -115,36 +115,32 @@ namespace TheQuest.WinApp
             this.lblGhoul.AutoSize = true;
             this.lblGhoul.Location = new System.Drawing.Point(69, 71);
             this.lblGhoul.Name = "lblGhoul";
-            this.lblGhoul.Size = new System.Drawing.Size(40, 13);
+            this.lblGhoul.Size = new System.Drawing.Size(0, 13);
             this.lblGhoul.TabIndex = 7;
-            this.lblGhoul.Text = "[zumbi]";
             // 
             // lblGhost
             // 
             this.lblGhost.AutoSize = true;
             this.lblGhost.Location = new System.Drawing.Point(69, 42);
             this.lblGhost.Name = "lblGhost";
-            this.lblGhost.Size = new System.Drawing.Size(56, 13);
+            this.lblGhost.Size = new System.Drawing.Size(0, 13);
             this.lblGhost.TabIndex = 6;
-            this.lblGhost.Text = "[fantasma]";
             // 
             // lblBat
             // 
             this.lblBat.AutoSize = true;
             this.lblBat.Location = new System.Drawing.Point(69, 19);
             this.lblBat.Name = "lblBat";
-            this.lblBat.Size = new System.Drawing.Size(49, 13);
+            this.lblBat.Size = new System.Drawing.Size(0, 13);
             this.lblBat.TabIndex = 5;
-            this.lblBat.Text = "Morcego";
             // 
             // lblGamer
             // 
             this.lblGamer.AutoSize = true;
             this.lblGamer.Location = new System.Drawing.Point(69, 0);
             this.lblGamer.Name = "lblGamer";
-            this.lblGamer.Size = new System.Drawing.Size(48, 13);
+            this.lblGamer.Size = new System.Drawing.Size(0, 13);
             this.lblGamer.TabIndex = 4;
-            this.lblGamer.Text = "[jogador]";
             // 
             // Jogador
             // 
@@ -213,6 +209,7 @@ namespace TheQuest.WinApp
             this.btnAttackUp.TabIndex = 1;
             this.btnAttackUp.Text = "\t↑";
             this.btnAttackUp.UseVisualStyleBackColor = true;
+            this.btnAttackUp.Click += new System.EventHandler(this.btnAttackUp_Click);
             // 
             // btnAttackLeft
             // 
@@ -223,6 +220,7 @@ namespace TheQuest.WinApp
             this.btnAttackLeft.TabIndex = 2;
             this.btnAttackLeft.Text = "\t←";
             this.btnAttackLeft.UseVisualStyleBackColor = true;
+            this.btnAttackLeft.Click += new System.EventHandler(this.btnAttackLeft_Click);
             // 
             // btnAttackRight
             // 
@@ -233,6 +231,7 @@ namespace TheQuest.WinApp
             this.btnAttackRight.TabIndex = 3;
             this.btnAttackRight.Text = "\t→";
             this.btnAttackRight.UseVisualStyleBackColor = true;
+            this.btnAttackRight.Click += new System.EventHandler(this.btnAttackRight_Click);
             // 
             // btnAttackDown
             // 
@@ -244,6 +243,7 @@ namespace TheQuest.WinApp
             this.btnAttackDown.TabIndex = 4;
             this.btnAttackDown.Text = "↓";
             this.btnAttackDown.UseVisualStyleBackColor = true;
+            this.btnAttackDown.Click += new System.EventHandler(this.btnAttackDown_Click);
             // 
             // AttackPanelCaption
             // 
@@ -308,6 +308,7 @@ namespace TheQuest.WinApp
             this.btnMoveLeft.TabIndex = 2;
             this.btnMoveLeft.Text = "\t←";
             this.btnMoveLeft.UseVisualStyleBackColor = true;
+            this.btnMoveLeft.Click += new System.EventHandler(this.btnMoveLeft_Click);
             // 
             // btnMoveRight
             // 
@@ -318,6 +319,7 @@ namespace TheQuest.WinApp
             this.btnMoveRight.TabIndex = 3;
             this.btnMoveRight.Text = "→";
             this.btnMoveRight.UseVisualStyleBackColor = true;
+            this.btnMoveRight.Click += new System.EventHandler(this.btnMoveRight_Click);
             // 
             // btnMoveDown
             // 
@@ -445,11 +447,11 @@ namespace TheQuest.WinApp
             this.picSwordInventory.TabIndex = 28;
             this.picSwordInventory.TabStop = false;
             this.picSwordInventory.Visible = false;
+            this.picSwordInventory.Click += new System.EventHandler(this.picSwordInventory_Click);
             // 
             // picPotionBlueInventory
             // 
             this.picPotionBlueInventory.BackColor = System.Drawing.Color.Transparent;
-            this.picPotionBlueInventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picPotionBlueInventory.Image = ((System.Drawing.Image)(resources.GetObject("picPotionBlueInventory.Image")));
             this.picPotionBlueInventory.Location = new System.Drawing.Point(135, 318);
             this.picPotionBlueInventory.Name = "picPotionBlueInventory";
@@ -458,11 +460,11 @@ namespace TheQuest.WinApp
             this.picPotionBlueInventory.TabIndex = 29;
             this.picPotionBlueInventory.TabStop = false;
             this.picPotionBlueInventory.Visible = false;
+            this.picPotionBlueInventory.Click += new System.EventHandler(this.picPotionBlueInventory_Click);
             // 
             // picPotionRedInventory
             // 
             this.picPotionRedInventory.BackColor = System.Drawing.Color.Transparent;
-            this.picPotionRedInventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picPotionRedInventory.Image = ((System.Drawing.Image)(resources.GetObject("picPotionRedInventory.Image")));
             this.picPotionRedInventory.Location = new System.Drawing.Point(247, 318);
             this.picPotionRedInventory.Name = "picPotionRedInventory";
@@ -471,11 +473,11 @@ namespace TheQuest.WinApp
             this.picPotionRedInventory.TabIndex = 30;
             this.picPotionRedInventory.TabStop = false;
             this.picPotionRedInventory.Visible = false;
+            this.picPotionRedInventory.Click += new System.EventHandler(this.picPotionRedInventory_Click);
             // 
             // picMaceInventory
             // 
             this.picMaceInventory.BackColor = System.Drawing.Color.Transparent;
-            this.picMaceInventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picMaceInventory.Image = ((System.Drawing.Image)(resources.GetObject("picMaceInventory.Image")));
             this.picMaceInventory.Location = new System.Drawing.Point(303, 318);
             this.picMaceInventory.Name = "picMaceInventory";
@@ -484,11 +486,11 @@ namespace TheQuest.WinApp
             this.picMaceInventory.TabIndex = 31;
             this.picMaceInventory.TabStop = false;
             this.picMaceInventory.Visible = false;
+            this.picMaceInventory.Click += new System.EventHandler(this.picMaceInventory_Click);
             // 
             // picBowInventory
             // 
             this.picBowInventory.BackColor = System.Drawing.Color.Transparent;
-            this.picBowInventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBowInventory.Image = ((System.Drawing.Image)(resources.GetObject("picBowInventory.Image")));
             this.picBowInventory.Location = new System.Drawing.Point(191, 318);
             this.picBowInventory.Name = "picBowInventory";
@@ -497,6 +499,7 @@ namespace TheQuest.WinApp
             this.picBowInventory.TabIndex = 32;
             this.picBowInventory.TabStop = false;
             this.picBowInventory.Visible = false;
+            this.picBowInventory.Click += new System.EventHandler(this.picBowInventory_Click);
             // 
             // picMace
             // 

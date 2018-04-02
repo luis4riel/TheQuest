@@ -5,18 +5,15 @@ namespace TheQuest.WinApp
 {
     internal class Bow : Weapon
     {
-        private Game game;
-        private Point point;
-
         public Bow(Game game, Point location) : base(game, location)
         {
         }
 
-        public override string Name => "Bow";
+        public override string Name { get { return "Bow"; } }
 
         public override void Attack(Direction direction, Random random)
         {
-            throw new NotImplementedException();
+            DamageEnemy(direction, 30, 6, random);
         }
     }
 }

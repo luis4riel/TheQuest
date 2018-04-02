@@ -3,9 +3,9 @@ using System.Drawing;
 
 namespace TheQuest.WinApp
 {
-    internal class BluePotion : Weapon, IPotion
+    internal class RedPotion : Weapon, IPotion
     {
-        public BluePotion(Game game, Point location) : base(game, location)
+        public RedPotion(Game game, Point location) : base(game, location)
         {
             Used = false;
         }
@@ -22,7 +22,7 @@ namespace TheQuest.WinApp
 
         public override void Attack(Direction direction, Random random)
         {
-            game.IncreasePlayerHealth(5, random);
+            _game.IncreasePlayerHealth(5, random);
             Used = true;
         }
     }

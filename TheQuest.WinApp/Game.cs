@@ -29,7 +29,7 @@ namespace TheQuest.WinApp
 
         public void Move(Direction direction, Random random)
         {
-            player.Move(direction); ;
+            player.Move(direction);
             foreach (Enemy enemy in Enemies)
                 enemy.Move(random);
         }
@@ -73,20 +73,23 @@ namespace TheQuest.WinApp
                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
                     WeaponInRoom = new Sword(this, GetRandomLocation(random));
                     break;
+
                 case 2:
                     Enemies.Clear();
                     Enemies.Add(new Ghost(this, GetRandomLocation(random)));
                     WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                     break;
+
                 case 3:
                     Enemies.Clear();
-                   Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
                     WeaponInRoom = new Bow(this, GetRandomLocation(random));
                     break;
+
                 case 4:
                     Enemies.Clear();
                     Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                   Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
                     WeaponInRoom = null;
                     if (CheckPlayerInventory("Bow"))
                     {
@@ -97,21 +100,24 @@ namespace TheQuest.WinApp
                         WeaponInRoom = new Bow(this, GetRandomLocation(random));
                     }
                     break;
+
                 case 5:
                     Enemies.Clear();
-                   Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                  Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
                     WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
                     break;
+
                 case 6:
                     Enemies.Clear();
-                  Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                  Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
                     WeaponInRoom = new Mace(this, GetRandomLocation(random));
                     break;
+
                 case 7:
                     Enemies.Clear();
-                   Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
                     Enemies.Add(new Ghost(this, GetRandomLocation(random)));
                     Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
                     WeaponInRoom = null;
@@ -124,15 +130,11 @@ namespace TheQuest.WinApp
                         WeaponInRoom = new Mace(this, GetRandomLocation(random));
                     }
                     break;
+
                 case 8:
                     Application.Exit();
                     break;
             }
-        }
-
-        internal bool IsWeaponEquipped(string name)
-        {
-            throw new NotImplementedException();
         }
     }
 }
